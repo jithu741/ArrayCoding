@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+
+
+void reverse(int arr[rows][columns])
+{
+   
+    for(i=0;i<rows;i++)
+    {
+        for(j=0; k = columns -1; j<k; j++;k--)
+        {
+            swap(arr[i,j],arr[i,k]);
+        }
+    }
+}
+
+
+void transpose (int arr[rows][columns])
+{
+     for(i=0;i<rows;i++)
+     {
+         for(j=i;j<columns;j++)
+         {
+             swap(arr[i][j],arr[j][i]);
+         }
+     }
+}
+
+
+int main( )
+{
+     int i,j,k,arr[];
+}
