@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void seperate(int *arr, int size)
+{
+    int li = 0, ri = size-1;
+    
+    /*li = left index   ri = right index*/
+    
+    while( li< ri)
+    {
+        while((arr[li]==0) && (li<ri))
+            li++;
+            
+        while((arr[ri]==1) && (ri>li))
+            ri--;   
+            
+        if(li<ri)
+        {
+            arr[li++]=0;
+            arr[ri--]=1;
+        }
+    }
+}
+
+void print(int *arr, int size)
+{
+for(int index = 0; index < size; index++)
+printf("%d\t", arr[index]);
+}
+
+
+int main ()
+{
+    int size,*arr,index;
+    printf("enter size of array\n");
+    scanf("%d",&size);
+    printf("enter elements of array\n");
+    for (index = 0; index <size;index++)
+    scanf("%d",&arr[index]);
+    seperate(arr,size);
+    print(arr,size);
+    
+    return 0;
+    
+}
